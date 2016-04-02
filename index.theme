@@ -1,0 +1,10 @@
+[X-GNOME-Metatheme]
+Name=DarkRice
+Type=X-GNOME-Metatheme
+Comment=Flat, Dark, and Square.
+Encoding=UTF-8
+GtkTheme=DarkRice
+MetacityTheme=DarkRice
+IconTheme=DarkRice
+CursorTheme=DarkRice
+CursorSize=24
