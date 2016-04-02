@@ -49,10 +49,10 @@ $asset_suffix: if($variant=='dark', '-dark', '');
   // and we don't use any outlines for now.
 
   outline-color: transparentize($fg_color, 0.7);
-  outline-style: dashed;
+  outline-style: none;
   outline-offset: -3px;
   outline-width: 1px;
-  outline-radius: 2px;
+  outline-radius: 0;
 }
 
 
@@ -228,7 +228,7 @@ GtkTextView { // This will get overridden by .view, needed by gedit line numbers
     &.right { padding-right: 0; }
   }
 
-  border-radius: 3px;
+  border-radius: 0;
   transition: all 200ms $ease-out-quad;
   @include entry(normal);
 
@@ -366,7 +366,7 @@ $_dot_color: if($variant=='light', $selected_bg_color,
   $_button_transition: all 200ms $ease-out-quad;
 
   border: 1px solid;
-  border-radius: 3px;
+  border-radius: 0;
   padding: 5px 8px 6px;
   transition: $_button_transition;
   @include button(normal);
@@ -1106,13 +1106,9 @@ GtkComboBox {
 .titlebar,
 .header-bar {
   padding: 6px;
-  border-width: 0 0 1px;
   border-style: solid;
   border-color: $borders_color;
-  border-radius: 7px 7px 0 0;
-  background-color: transparent;
-
-  @include headerbar_fill;
+  background-color: $bg_color;
 
   &:backdrop {
     border-color: $backdrop_borders_color;
@@ -1138,7 +1134,7 @@ GtkComboBox {
   & > GtkBox > .separator.vertical {
     -GtkWidget-wide-separators: true;
     -GtkWidget-separator-width: 1px;
-    border-width: 0 1px;
+    border-width: 0 0;
     border-image: linear-gradient(to bottom,
                                   transparentize($borders_color,1),
                                   $borders_color 30%,
